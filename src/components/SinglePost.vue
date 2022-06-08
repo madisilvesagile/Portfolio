@@ -6,32 +6,34 @@
       {{ error }}
     </div>
 
-    <div v-if="post" class="content">
-      <h2>{{ post.title }}</h2>
-      <div class="space-between">
-        <div>
-          <h3>Tags</h3>
-          <p class="text-sm">{{ post.categories.join(", ") }}</p>
+    <section>
+      <div v-if="post" class="content">
+        <h2>{{ post.title }}</h2>
+        <div class="space-between">
+          <div>
+            <h3>Tags</h3>
+            <p class="text-sm">{{ post.categories.join(", ") }}</p>
+          </div>
+          <div>
+            <h3>Work hours</h3>
+            <p class="text-sm">{{ post.name }}hr</p>
+          </div>
+          <div>
+            <h3>Issued</h3>
+            <p class="text-sm">{{ post.publishedAt }}</p>
+          </div>
         </div>
-        <div>
-          <h3>Work hours</h3>
-          <p class="text-sm">{{ post.name }}hr</p>
-        </div>
-        <div>
-          <h3>Issued</h3>
-          <p class="text-sm">{{ post.publishedAt }}</p>
-        </div>
+        <img v-if="post.image" :src="imageUrlFor(post.image).width(480)" />
+        <article>
+          <h5>Problem</h5>
+          <p>{{ post.excerpt }}</p>
+        </article>
+        <article>
+          <h5>Solution</h5>
+          <SanityBlocks :blocks="blocks" />
+        </article>
       </div>
-      <img v-if="post.image" :src="imageUrlFor(post.image).width(480)" />
-      <article>
-        <h5>Problem</h5>
-        <p>{{ post.excerpt }}</p>
-      </article>
-      <article>
-        <h5>Solution</h5>
-        <SanityBlocks :blocks="blocks" />
-      </article>
-    </div>
+    </section>
   </div>
 </template>
 

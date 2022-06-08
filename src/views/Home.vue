@@ -3,7 +3,7 @@
     <div class="loading" v-if="loading">Loading...</div>
 
     <section>
-      <h1><b>Madis Ilves</b><br />UI/UX designer</h1>
+      <h1><b>Madis Ilves</b><br /><small>UI/UX designer</small></h1>
       <div class="space-between">
         <span class="material-symbols-outlined absolute">
           apps

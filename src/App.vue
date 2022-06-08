@@ -55,13 +55,13 @@
     </div>
 
     <div class="nav-desktop">
-      <div class="logo">
-        <img src="./assets/bobcat.png" alt="Bobcat logo" />
-      </div>
       <div>
         <router-link to="/">cv</router-link>
         <router-link to="/portfolio">portfolio</router-link>
         <router-link to="/contact">contact</router-link>
+      </div>
+      <div class="logo">
+        <img src="./assets/bobcat.png" alt="Bobcat logo" />
       </div>
       <div class="space-between icons">
         <a href="#" target="_blank">

@@ -1,7 +1,14 @@
 body {
     font-family: 'Work Sans', sans-serif;
     color: $gray-20;
-    background: $gray-100;
+    --stripe: #F9fafb;
+    --bg: #F6f7f9;
+    background: linear-gradient(135deg, var(--bg) 25%, transparent 25%) -50px 0,
+        linear-gradient(225deg, var(--bg) 25%, transparent 25%) -50px 0,
+        linear-gradient(315deg, var(--bg) 25%, transparent 25%),
+        linear-gradient(45deg, var(--bg) 25%, transparent 25%);
+    background-size: 100px 100px;
+    background-color: var(--stripe);
 }
 
 main {
@@ -98,7 +105,7 @@ footer {
     margin: 5rem auto;
     padding: 5rem;
 
-    .footer-text p{
+    .footer-text p {
         color: $gray-80;
     }
 
@@ -118,7 +125,8 @@ footer {
     }
 
 
-    .space-between, .space-around {
+    .space-between,
+    .space-around {
         display: flex;
         flex-direction: column;
         align-items: center;
