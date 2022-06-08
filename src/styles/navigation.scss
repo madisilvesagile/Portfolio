@@ -10,12 +10,14 @@
         text-decoration: none;
         text-transform: uppercase;
         padding: 1.5rem;
+        
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: 1rem;
+        }
     }
 
-    &:hover {
-        text-decoration: underline;
-        text-underline-offset: 1rem;
-    }
+    
 
     & .router-link-exact-active {
         color: black;
