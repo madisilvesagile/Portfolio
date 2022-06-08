@@ -9,6 +9,7 @@
     "author": "Ashutosh K Singh",
     "license": "MIT",
     "dependencies": {
+        "@emailjs/browser": "^3.6.2",
         "@sanity/client": "^2.23.2",
         "@sanity/image-url": "^0.140.22",
         "core-js": "^3.6.5",

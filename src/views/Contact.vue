@@ -1,22 +1,38 @@
 <template>
-  <p>
     <section>
       <h2>Contact</h2>
-      <form>
-        <label for="name">Name</label>
-        <input type="text" id="fname" name="name" autocomplete="off">
-  
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" autocomplete="off">
-  
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject"></textarea>
-  
-        <button>Send</button>
+      <form ref="form" @submit.prevent="sendEmail" @submit="submitForm">
+        <label>Name</label>
+        <input type="text" name="user_name">
+        <label>Email</label>
+        <input type="email" name="user_email">
+        <label>Message</label>
+        <textarea name="message"></textarea>
+        <button type="submit" value="Send">Send</button>
       </form>
     </section>
-  </p>
 </template>
+
+<script>
+import emailjs from '@emailjs/browser';
+
+export default {
+  name: 'MyComponent',
+  methods: {
+    sendEmail() {
+      emailjs.sendForm('service_ufi3pfr', 'template_hpxetew', this.$refs.form, 'mAxs_kQQdKFT2LoFN')
+        .then((result) => {
+            console.log('SUCCESS!', result.text);
+        }, (error) => {
+            console.log('FAILED...', error.text);
+        });
+    },
+    submitForm(){
+        this.$refs.form.reset();
+    },
+  },
+}
+</script>
 
 <style scoped>
 form {
@@ -28,7 +44,7 @@ form {
 
 input, textarea {
   padding: 1rem;
-  border: 1px solid var(--gray-80);
+  border: 1px solid $gray-80;
   box-sizing: border-box;
   margin-top: 0.25rem;
   margin-bottom: 1rem;
@@ -37,7 +53,7 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-  outline-color:  var(--gray-70);
+  outline-color:  $gray-70;
 }
 
 textarea {
@@ -47,7 +63,18 @@ textarea {
 button {
   padding: 1rem;
   font-size: 1rem;
-  color: var(--gray-10);
+  color: $gray-10;
+}
+.message {
+    position: fixed;
+    z-index: 10;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1rem;
+    font-weight: 600;
+    background-color: white;
+    border: 1px solid $grey-10;
+    border-radius: .125rem;
 }
 
 @media (max-width: 768px) {
