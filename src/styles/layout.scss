@@ -1,0 +1,185 @@
+body {
+    font-family: 'Work Sans', sans-serif;
+    color: $gray-20;
+    background: $gray-100;
+}
+
+main {
+    max-width: 100rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+section {
+    margin: 8rem auto;
+    width: 100%;
+}
+
+.space-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.space-around {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+hr {
+    margin: 0 auto;
+    border-top: 2px solid $gray-90;
+}
+
+aside {
+    width: 18rem;
+    height: 36rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+aside:first-of-type {
+    align-items: flex-start;
+}
+
+aside:last-of-type {
+    align-items: flex-end;
+    text-align: end;
+}
+
+.section-center {
+    width: 32rem;
+    height: 42rem;
+    position: relative;
+    background-image: url('./assets/blob.png') white no-repeat center;
+    overflow: hidden
+}
+
+.education {
+    align-content: center;
+}
+
+.education div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: flex-start;
+}
+
+.skills {
+    margin: 10rem auto 0;
+    align-content: center;
+    text-align: center;
+}
+
+.skills div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 6rem;
+}
+
+.projects a:hover {
+    text-decoration: none;
+}
+
+footer {
+    background: $gray-20;
+    align-items: center;
+    margin: 5rem auto;
+    padding: 5rem;
+
+    .footer-text p{
+        color: $gray-80;
+    }
+
+    .icons {
+        width: 8rem;
+    }
+
+    path {
+        fill: $gray-80;
+    }
+}
+
+@media (max-width: 768px) {
+
+    section {
+        margin-top: 5rem;
+    }
+
+
+    .space-between, .space-around {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    aside {
+        height: 30rem;
+    }
+
+    aside:first-of-type {
+        margin-bottom: 2rem;
+    }
+
+    aside:first-of-type,
+    aside:last-of-type,
+    .section-center,
+    .education {
+        align-items: center;
+        text-align: center;
+    }
+
+    .section-center {
+        width: 100vw;
+    }
+
+    .education div {
+        gap: 1rem;
+        margin-bottom: 4rem;
+    }
+
+    .education div:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .skills {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .skills img {
+        transform: scale(0.5);
+    }
+
+    .projects {
+        justify-content: center;
+    }
+
+    .projects .space-between {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .content .space-between {
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    footer>main>p:first-of-type,
+    .icons {
+        display: none;
+    }
+}

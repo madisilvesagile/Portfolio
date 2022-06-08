@@ -9,12 +9,14 @@
     "author": "Ashutosh K Singh",
     "license": "MIT",
     "dependencies": {
-        "@sanity/client": "^2.2.6",
+        "@sanity/client": "^2.23.2",
         "@sanity/image-url": "^0.140.22",
         "core-js": "^3.6.5",
-        "sanity-blocks-vue-component": "^1.0.0",
+        "node-sass": "^7.0.1",
+        "sanity-blocks-vue-component": "^1.0.1",
         "vue": "^3.0.0",
-        "vue-router": "^4.0.0-0"
+        "vue-router": "^4.0.0-0",
+        "vue3-burger-menu": "^1.1.1"
     },
     "devDependencies": {
         "@vue/cli-plugin-babel": "~4.5.0",
@@ -24,7 +26,9 @@
         "@vue/compiler-sfc": "^3.0.0",
         "babel-eslint": "^10.1.0",
         "eslint": "^6.7.2",
-        "eslint-plugin-vue": "^7.0.0-0"
+        "eslint-plugin-vue": "^7.0.0-0",
+        "sass": "^1.52.2",
+        "sass-loader": "^10.1.1"
     },
     "eslintConfig": {
         "root": true,
