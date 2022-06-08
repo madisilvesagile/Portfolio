@@ -12,12 +12,13 @@ https://www.figma.com/proto/vow1J4VzyWSPiX0tlzGD2E/Eksam?page-id=0%3A1&node-id=8
 https://www.figma.com/proto/vow1J4VzyWSPiX0tlzGD2E/Eksam?page-id=0%3A1&node-id=86%3A69&viewport=176%2C225%2C0.1&scaling=contain&starting-point-node-id=86%3A69&show-proto-sidebar=1
 
 ### Vue
+Root kaustas
 ```
 npm run serve
 ```
 
 ### Sanity Studio
-
+Sanity-studio kaustas
 ```
 sanity start
 ```
