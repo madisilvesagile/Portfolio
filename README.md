@@ -1,4 +1,7 @@
 
+## Github Pages
+https://madisilvesagile.github.io/Portfolio/
+
 ## Vue Project setup
 ```
 npm install
@@ -21,5 +24,3 @@ npm run build
 sanity start
 ```
 
-## Github Pages
-https://madisilvesagile.github.io/Portfolio/
