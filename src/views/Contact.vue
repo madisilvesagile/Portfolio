@@ -5,11 +5,11 @@
         <div class="row">
           <div class="form-group">
             <label>Name</label>
-            <input type="text" name="user_name">
+            <input type="text" name="user_name" required>
           </div>
           <div class="form-group">
             <label>Email</label>
-            <input type="email" name="user_email">
+            <input type="email" name="user_email" required>
           </div>
         </div>
         <div class="form-group">
